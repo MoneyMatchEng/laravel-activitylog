@@ -77,7 +77,6 @@ trait LogsActivity
                 // Actual logging
                 $logger = app(ActivityLogger::class)
                     ->useLog($logName)
-                    ->event($eventName)
                     ->performedOn($model)
                     ->withProperties($event->changes);
 

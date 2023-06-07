@@ -224,8 +224,6 @@ class ActivityLogger
                 ->useLog($this->defaultLogName)
                 ->withProperties([])
                 ->causedBy($this->causerResolver->resolve());
-
-            $this->activity->batch_uuid = $this->batch->getUuid();
         }
 
         return $this->activity;
